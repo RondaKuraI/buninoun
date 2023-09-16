@@ -1,7 +1,7 @@
 <?= $this->include('inc/top') ?>
 <div class="container mt-3">
   <h2>Dark Striped Table</h2>
-  <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>            
+  <a href="<?= base_url('add') ?>">Add</a>
   <table class="table table-dark table-striped">
     <thead>
       <tr>
