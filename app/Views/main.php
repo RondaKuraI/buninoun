@@ -1,6 +1,6 @@
 <?= $this->include('inc/top') ?>
 <div class="container mt-3">
-  <h2>Dark Striped Table</h2>
+  <h2>Products</h2>
   <a href="<?= base_url('add') ?>">Add</a>
   <table class="table table-dark table-striped">
     <thead>
