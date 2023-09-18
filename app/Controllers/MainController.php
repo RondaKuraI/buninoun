@@ -15,9 +15,10 @@ class MainController extends BaseController
             'Quantity' => $this->request->getPost('Quantity'),
             'Price' => $this->request->getPost('Price'),
             'Expiry_Date' => $this->request->getPost('Expiry_Date'),
-            'Created_At' => $this->request->getPost('Created_At'),
+            //'Created_At' => $this->request->getPost('Created_At'),
         ];
         $this->main->insert($data);
+        return redirect()->to('/main');
         
     }
     public function add(){
@@ -33,5 +34,16 @@ class MainController extends BaseController
         $data['product'] = $this->main->findAll();
         //print_r($data);
         return view('main', $data);
+    }
+    public function delete($ID = null){
+        $this->main->delete(['ID' => $ID]);
+        return redirect()->to('/main');
+    }
+    public function update($ID){
+        $data = [
+            'product' => $this->main->findAll(),
+            'pro' => $this->main->where('ID', $ID)->first(),
+        ];
+        return view('add', $data);
     }
 }

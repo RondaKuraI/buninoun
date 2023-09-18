@@ -13,7 +13,7 @@ class MainModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['ID', 'UPC', 'Name', 'Quantity', 'Price', 'Expiry_Date', 'Created_At'];
+    protected $allowedFields    = ['ID', 'UPC', 'Name', 'Quantity', 'Price', 'Expiry_Date'];
 
     // Dates
     protected $useTimestamps = false;

@@ -12,6 +12,7 @@
         <th>Price</th>
         <th>Expiry_Date</th>
         <th>Created_At</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,10 @@
                     <td><?= $k['Price'] ?></td>
                     <td><?= $k['Expiry_Date'] ?></td>
                     <td><?= $k['Created_At'] ?></td>
+                    <td>
+                      <a href = "/update/<?= $k['ID']?>">Edit</a>
+                      <a href = "/delete/<?= $k['ID']?>">Delete</a>
+                    </td>
                 </tr>
         <?php endforeach; ?>
     </tbody>
